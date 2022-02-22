@@ -6,7 +6,13 @@ var logger = require('morgan');
 
 const mongoose = require('mongoose')
 require('./db')
+mongoose.connect('mongodb://127.0.0.1/coches', {useNewUrlParser: true, useUnifiedTopology: true})
 const hbs = require('hbs')
+const Store = require('express-session').Store
+const MongooseStore = require('mongoose-express-session')(Store)
+const passport = require('passport')
+require('./lib/passport')
+require('dotenv').config()
 
 
 var indexRouter = require('./routes/index');
@@ -25,6 +31,22 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(require('express-session')({
+    secret: 'hola',
+    resave: false,
+    rolling: false,
+    saveUninitialized: false,
+    store: new MongooseStore({mongoose: mongoose})
+}))
+
+app.use(passport.initialize())
+app.use(passport.session())
+
+app.use((req, res, next) => {
+  app.locals.user = req.user
+  next()
+})
 
 app.use('/', indexRouter);
 app.use('/coches', cochesRouter);
