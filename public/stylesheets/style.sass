@@ -23,20 +23,49 @@ nav
 
 body
     width: 100vw
-.t_c
-    text-align: center 
+
+.c_lista
+    width: 100vw
+    h1
+        text-align: center
+        margin: 20px 0
+    
+
 .c_list
     width: 60%
     margin: 0 auto
     display: flex
+    flex-wrap: wrap
     .c_coche_list
-        border: 2px solid blue
+        background: #299f8a
         margin: 10px
+        border-radius: 5px
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 10px
+        .c_img
+            width: 200px
+            img
+               width:  100%
+
+.c_boton
+    display: flex
 
 .boton
-    background-color:#299f8a
+    background-color:#1b25ad
+    padding: 5px 10px
+    border-radius: 5px
+    margin: 0 5px
+    a
+        text-decoration: none
+        color: white
+        background-color:#1b25ad
+        border: none
 
 .container
+    width: 50%
+    margin: 0 auto
     height: calc(100vh - 40px)
     text-align: center
     display: flex
@@ -48,3 +77,23 @@ body
         padding: 3px 5px
     
     
+.container_sig
+    width: 40%
+    margin: 0 auto
+    h1
+        text-align: center
+        margin: 20px 0
+    form
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        input
+            margin: 10px 0
+            padding: 5px 10px
+
+        button
+            background-color:#1b25ad
+            padding: 5px 10px
+            border-radius: 5px
+            color: white

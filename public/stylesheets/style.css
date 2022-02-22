@@ -41,8 +41,13 @@ body {
   width: 100vw;
 }
 
-.t_c {
+.c_lista {
+  width: 100vw;
+}
+
+.c_lista h1 {
   text-align: center;
+  margin: 20px 0;
 }
 
 .c_list {
@@ -51,18 +56,58 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .c_list .c_coche_list {
-  border: 2px solid blue;
+  background: #299f8a;
   margin: 10px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.c_list .c_coche_list .c_img {
+  width: 200px;
+}
+
+.c_list .c_coche_list .c_img img {
+  width: 100%;
+}
+
+.c_boton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .boton {
-  background-color: #299f8a;
+  background-color: #1b25ad;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.boton a {
+  text-decoration: none;
+  color: white;
+  background-color: #1b25ad;
+  border: none;
 }
 
 .container {
+  width: 50%;
+  margin: 0 auto;
   height: calc(100vh - 40px);
   text-align: center;
   display: -webkit-box;
@@ -81,5 +126,41 @@ body {
   background-color: #299f8a;
   border-radius: 5px;
   padding: 3px 5px;
+}
+
+.container_sig {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.container_sig h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.container_sig form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container_sig form input {
+  margin: 10px 0;
+  padding: 5px 10px;
+}
+
+.container_sig form button {
+  background-color: #1b25ad;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
