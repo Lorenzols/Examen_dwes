@@ -8,3 +8,4 @@ const CochesSchema = mongoose.Schema({
 })
 
 module.exports = mongoose.model('Coches', CochesSchema)
+

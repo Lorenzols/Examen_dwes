@@ -1,3 +1,9 @@
 <div class="container">
-    <h1>EDIT</h1>
+    <h1>Edit</h1>
+    <form action="/coches/edit/{{coche._id}}" method="post">
+        <input type="text" placeholder="Marca" name="marca" value="{{coche.marca}}">
+        <input type="text" placeholder="Potencia" name="potencia" value="{{coche.potencia}}">
+        <input type="text" placeholder="Url" name="url" value="{{coche.url}}">
+        <button type="submit">Edit</button>
+    </form>
 </div>

@@ -1,9 +1,13 @@
-<div class="container">
-    <h1>Listar</h1>
+<h1 class="t_c">Listar</h1>
+<div class="c_list">  
     {{#each coches}}
-        <h1>{{marca}}</h1>
-        <h1>{{potencia}}</h1>
+        <div class="c_coche_list">
+            <h1>{{marca}}</h1>
+            <h1>{{potencia}}</h1>
+            <button type="submit"><a href="/coches/edit/{{_id}}">Edit</a></button>
+            <button type="submit"><a href="/coches/delete/{{_id}}">Delete</a></button>
+        </div>
     {{else}}
-    <h1>No hay nada</h1>
+        <h1>No hay nada</h1>
     {{/each}}
 </div>
