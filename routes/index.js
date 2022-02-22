@@ -2,8 +2,21 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', async(req, res, next)  => {
   res.render('index', { title: 'Express' });
+});
+
+router.get('/signup', async(req, res, next)  => {
+  res.render('auth/signup');
+});
+
+router.get('/signin', async(req, res, next)  => {
+  res.render('auth/signin');
+});
+
+router.get('/logout', async(req, res, next)  => {
+  req.logOut
+  res.redirect('/signin');
 });
 
 module.exports = router;
