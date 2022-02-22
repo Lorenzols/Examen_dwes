@@ -1,3 +1,9 @@
 <div class="container">
     <h1>Listar</h1>
+    {{#each coches}}
+        <h1>{{marca}}</h1>
+        <h1>{{potencia}}</h1>
+    {{else}}
+    <h1>No hay nada</h1>
+    {{/each}}
 </div>
